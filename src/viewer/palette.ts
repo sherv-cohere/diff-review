@@ -1,0 +1,26 @@
+// GitHub dark, matching the Shiki theme.
+
+export const C = {
+  fg: '#e6edf3',
+  dim: '#8b949e',
+  faint: '#6e7681',
+  border: '#30363d',
+  accent: '#58a6ff',
+  green: '#3fb950',
+  red: '#f85149',
+  yellow: '#d29922',
+  bar: '#161b22',
+  gap: '#161b22',
+  empty: '#0f1318',
+  addLine: '#12261e',
+  addWord: '#226b3a',
+  addGutter: '#1a3d27',
+  delLine: '#2b1619',
+  delWord: '#7a2c30',
+  delGutter: '#45201f',
+  sel: '#1c3456',
+  selGutter: '#2a4d7a',
+  current: '#1f2a3a',
+  button: '#21262d',
+  code: '#79c0ff',
+} as const

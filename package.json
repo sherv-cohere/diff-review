@@ -1,0 +1,27 @@
+{
+  "name": "diff-review",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Terminal diff reviewer for Claude Code sessions running in Rex",
+  "type": "module",
+  "bin": {
+    "diff-review": "./dist/diff-review.mjs"
+  },
+  "scripts": {
+    "build": "rm -rf dist && esbuild src/main.ts --bundle --splitting --platform=node --format=esm --target=node22 --minify --outdir=dist --entry-names=diff-review --chunk-names=chunks/[name]-[hash] --out-extension:.js=.mjs --banner:js='#!/usr/bin/env bun' && chmod +x dist/diff-review.mjs",
+    "typecheck": "tsc --noEmit && tsc --noEmit -p vendor/grok-mermaid",
+    "test": "vitest run"
+  },
+  "dependencies": {
+    "@pierre/highlights": "0.3.0",
+    "diff": "9.0.0",
+    "grok-mermaid": "file:vendor/grok-mermaid",
+    "marked": "18.1.1"
+  },
+  "devDependencies": {
+    "@types/node": "^26.6.6",
+    "esbuild": "^0.28.2",
+    "typescript": "^7.0.2",
+    "vitest": "^5.0.5"
+  }
+}

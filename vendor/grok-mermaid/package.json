@@ -1,0 +1,13 @@
+{
+  "name": "grok-mermaid",
+  "version": "0.2.3-diff-review",
+  "private": true,
+  "license": "Apache-2.0",
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": "./index.d.ts",
+      "default": "./src/index.ts"
+    }
+  }
+}
